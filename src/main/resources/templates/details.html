@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Details</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{~/css/main.css}">
+
+    <!-- css datatable -->
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<div th:replace="~{navigationMenu::navigation}"></div>
+<div id="content" class="container">
+    <table>
+        <tr>
+            <td>Item</td>
+            <td th:text="${product.naam}"></td>
+        </tr>
+        <tr>
+            <td>Omschrijving</td>
+            <td th:text="${product.omschrijving}"></td>
+        </tr>
+        <tr>
+            <td>Prijs</td>
+            <td th:text="${product.vraagprijs}"></td>
+        </tr>
+        <tr>
+            <td>Aanbieder</td>
+            <td th:text="${product.userName}"></td>
+        </tr>
+        <tr>
+            <td>E-mailadres</td>
+            <td><a class="btn" th:href="'mailto:' + ${product.email}" th:text="${product.email}"></a></td>
+        </tr>
+
+
+
+    </table>
+</div>
+
+</body>
+<footer>
+    <!-- speciale karakters moet je escapen met & (karakters die al door te taal gebruikt worden) -->
+    &copy;Bethje 2018
+</footer>
+</html>

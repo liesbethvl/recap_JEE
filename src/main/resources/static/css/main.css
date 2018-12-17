@@ -1,0 +1,60 @@
+nav{
+    height: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    background-color: darkolivegreen;
+
+
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display:inline-block;
+    padding-top: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: Tahoma, "Bauhaus 93";
+    font-size: 16pt;
+    padding: 20px;
+    color: wheat;
+}
+
+nav ul li a:hover{
+    color: darkorange;
+    text-decoration: none;
+}
+
+h1 {
+    margin-top: 80px;
+    font-family: Tahoma, "Bauhaus 93";
+}
+
+#content, #items {
+    padding-top: 70px;
+    padding-left: 30px;
+    background-color: wheat;
+}
+
+#formulierknop {
+    padding-top: 10px;
+    padding-left: 30px;
+    background-color: wheat;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 30px;
+}
